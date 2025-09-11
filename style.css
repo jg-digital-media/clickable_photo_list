@@ -1,0 +1,282 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+
+Last Updated: 09/09/2025 - 15:52
+*/
+html {
+  height: 100%;
+}
+html body {
+  display: block;
+  background: #ffffff;
+  color: #000000;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+html body header {
+  /* border-bottom: solid #444444 1px; */
+  /* box-shadow: #000000 0 0 0 0; */
+  border-bottom: solid #e5dbdb 1px;
+  box-shadow: #e5dbdb 2px 2px 4px 0px;
+  height: 70px;
+}
+html body header h1, html body header h2 {
+  text-align: center;
+}
+html body header h1 {
+  font-size: 32px;
+  margin: 3px 0;
+}
+html body header h2 {
+  font-size: 14px;
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+}
+html body .main-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 160px);
+  overflow: hidden;
+}
+html body section.photo---element--container {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+html body section.photo---element--container div#photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body section.photo---element--container div#photos img {
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 230px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 7px;
+  border: solid white 2px;
+  box-shadow: black 0 0 5px;
+}
+@media (max-width: 680px) {
+  html body section.photo---element--container div#photos img {
+    max-height: calc(100vh - 135px);
+  }
+}
+html body section.photo---element--container .photo---caption {
+  background-color: #404040;
+  position: absolute;
+  padding: 4px;
+  bottom: 64px;
+  border-radius: 6px;
+  left: 50%;
+  /* color: $background---main; */
+  color: white;
+  transform: translateX(-50%);
+  z-index: 2000;
+  pointer-events: none;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 680px) {
+  html body section.photo---element--container .photo---caption {
+    bottom: 17px;
+  }
+}
+html body section.photo---element--container .photo---caption span {
+  /* color: $background---main; */
+  color: #fff537;
+  padding: 8px 4px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  display: inline-block;
+  max-width: 80vw;
+  word-wrap: break-word;
+}
+html body aside#url---list {
+  /* width: 300px; */
+  width: 190px;
+  /* background-color: #f8f9fa; */
+  /* border-left: 1px solid #dee2e6; */
+  padding: 20px;
+  overflow-y: auto;
+}
+@media (max-width: 680px) {
+  html body aside#url---list {
+    padding: 2px;
+    width: 135px;
+  }
+}
+html body aside#url---list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+html body aside#url---list ul li {
+  margin: 15px 0;
+}
+@media (max-width: 680px) {
+  html body aside#url---list ul li {
+    font-size: 12px;
+  }
+}
+html body aside#url---list ul li a {
+  color: #820303;
+  transition: color 0.4s ease-in-out;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+html body aside#url---list ul li a:hover {
+  color: #0056b3;
+  /* background-color: #e9ecef; */
+}
+html body aside#url---list ul li a.active {
+  color: #ec2020;
+  /* background-color: $url---color--primary; */
+  /* font-weight: bold; */
+  /* &:hover {
+      color: #ffffff;
+      background-color: $url---color--primary-hover;
+  } */
+}
+html .notes-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /* min-height: calc(100vh - 160px); */
+}
+html .notes-container .notes-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5dbdb;
+}
+@media (max-width: 980px) {
+  html .notes-container .notes-content {
+    padding: 30px;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 680px) {
+  html .notes-container .notes-content {
+    padding: 20px;
+    margin: 0 10px;
+  }
+}
+html .notes-container .notes-content h2 {
+  color: #000000;
+  border-bottom: 2px solid #820303;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+@media (max-width: 680px) {
+  html .notes-container .notes-content h2 {
+    font-size: 24px;
+  }
+}
+html .notes-container .notes-content h2 a {
+  font-size: small;
+  color: #820303;
+  transition: color 0.3s ease-in-out;
+  margin: 0 4px;
+  font-size: 11px;
+}
+html .notes-container .notes-content h2 a:hover {
+  color: #0056b3;
+}
+html .notes-container .notes-content .technical-summary h3 {
+  color: #820303;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+@media (max-width: 680px) {
+  html .notes-container .notes-content .technical-summary h3 {
+    font-size: 20px;
+  }
+}
+html .notes-container .notes-content .technical-summary .summary-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #820303;
+  border-radius: 4px;
+}
+html .notes-container .notes-content .technical-summary .summary-section.future-notes {
+  background-color: #fff3cd;
+  border-left-color: #ffc107;
+}
+html .notes-container .notes-content .technical-summary .summary-section h4 {
+  color: #000000;
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+html .notes-container .notes-content .technical-summary .summary-section p {
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+}
+html .notes-container .notes-content .technical-summary .summary-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+html .notes-container .notes-content .technical-summary .summary-section ul li {
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+html .notes-container .notes-content .technical-summary .summary-section ul li strong {
+  color: #820303;
+}
+html .notes-container .notes-content .technical-summary .summary-section ul li code {
+  background-color: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #d63384;
+}
+html footer {
+  text-align: center;
+  margin: 6px 0;
+}
+html footer p a {
+  color: red;
+  transition: color 0.3s ease-in-out;
+  margin: 0 4px;
+  font-size: 11px;
+}
+html footer p a:hover {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
