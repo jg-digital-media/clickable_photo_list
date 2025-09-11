@@ -23,7 +23,7 @@
             </div>
 
             <div class="photo---caption">
-                <?php echo htmlspecialchars($default_photo['caption']); ?> <span>(<?php echo htmlspecialchars($default_photo['scientific_name']); ?>)</span>
+                <?php echo htmlspecialchars($default_photo['caption']); ?> <span>(<?php echo htmlspecialchars($default_photo['caption']); ?>)</span>
             </div>
 
         </section>
@@ -32,7 +32,7 @@
             
             <ul>
                 <?php foreach($photos as $photo): ?>
-                <li><a href="#" data-image="<?php echo htmlspecialchars($photo['filepath']); ?>" data-caption="<?php echo htmlspecialchars($photo['caption']); ?>" data-scientific="<?php echo htmlspecialchars($photo['scientific_name']); ?>"><?php echo htmlspecialchars($photo['caption']); ?></a></li>
+                <li><a href="#" data-image="<?php echo htmlspecialchars($photo['filepath']); ?>" data-caption="<?php echo htmlspecialchars($photo['caption']); ?>" data-scientific="<?php echo htmlspecialchars($photo['caption']); ?>"><?php echo htmlspecialchars($photo['caption']); ?></a></li>
                 <?php endforeach; ?>
             </ul>
 

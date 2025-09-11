@@ -2,9 +2,16 @@
     {
         "filename": "IMG_8194.JPG",
         "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/flowers/IMG_8194.JPG",
-        "caption": "Daisy Flower",
-        "scientific_name": "Bellis perennis",
+        "caption": "caption",
+        "additional_key_one": "additional_key_value_one",
+        "date": "22-08-2025"
+    }, {
+        "filename": "IMG_8194.JPG",
+        "filepath": "20250131_202201.jpg",
+        "caption": "caption 2",
+        "additional_key_one": "additional_key_value_one",
         "date": "22-08-2025"
     }
+
 ]
 
