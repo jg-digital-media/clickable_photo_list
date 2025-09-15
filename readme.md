@@ -1,6 +1,6 @@
 # Clickable Photo List
 
-`Last Update: 11/09/2025 - 15:41`
+`Last Update: 15/09/2025 - 15:41`
 
 This is a simple project to demonstrate how to create a clickable photo list using PHP and JSON. You can use this repository to create your own photo list.
 
@@ -10,38 +10,38 @@ This is a simple project to demonstrate how to create a clickable photo list usi
 
 ## Instructions
 
-+ You'll need a local server, a version control system, somewhere to store your images and a structured JSON file.
++ You'll need a local server, a version control system, somewhere to store your images and a structured JSON file. (Things like Dropbox, Google Drive, OneDrive, S3.. somewhere you can share a public link to a image file etc).
 
-+ If you know `git bash` and how to clone a repository to your command line or terminal, you can clone this repository with `git clone https://github.com/jg-digital-media/clickable_photo_list.git`. Or you can download the zip file from the GitHub Repository and extract it to a folder on your local server.
++ If you know `git bash` and how to clone a repository to your command line or terminal, you can clone this repository with `git clone https://github.com/jg-digital-media/clickable_photo_list.git`. Or you can download the ZIP file from the GitHub Repository and extract it to a folder on your local server or hard drive.
 
-+ Now go to your JSON file and add the photos you want to display. You'll need a place to store your images with links so they can be publicly accessible.
++ Now go to your JSON file and add the photos you want to display. This is need a place to store your images with links so they can be publicly accessible. 
 
-  + `photo_list.json` - This is the file that will contain the list og photos that you will use. It's a simple JSON file with the following structure:  a `filename`. A `filepath`. A `caption` to go with each individual image. The `date` that the photo was taken. You can add any number of additional keys and values to each individual photo. `additional_key_one` is only one example of a key that you can use.
-
-  + You can modify the structured data in any way you wish, but the project will require the `filepath` and `caption keys` to be used.
++ `photo_list.json` - This is the file that will contain the list of photos that you will use. It's a simple JSON file with the following structure:  a `filename`. A `filepath`. A `caption` to go with each individual image. The `date` that the photo was taken. You can add any number of additional keys and values to each individual photo. `additional_key_one` is only one example of a key that you can use.
 
 ```json
-[
-    {
-        "filename": "IMG_8194.JPG",
-        "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/flowers/IMG_8194.JPG",
-        "caption": "caption",
-        "additional_key_one": "additional_key_value_one",
-        "date": "22-08-2025"
-    }, {
-        "filename": "IMG_8194.JPG",
-        "filepath": "IMG_8194.JPG",
-        "caption": "caption",
-        "additional_key_one": "additional_key_value_one",
-        "date": "22-08-2025"
+    [
+        {
+            "filename": "IMG_8194.JPG",
+            "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/flowers/IMG_8194.JPG",
+            "caption": "caption",
+            "additional_key_one": "additional_key_value_one",
+            "date": "22-08-2025"
+        }, {
+            "filename": "IMG_8194.JPG",
+            "filepath": "IMG_8194.JPG",
+            "caption": "caption",
+            "additional_key_one": "additional_key_value_one",
+            "date": "22-08-2025"
 
-    }
+        }
 ]
 ```
 
-+ `index.php` - This is the main file that will be used to display the photos. It will load the JSON file and display the photos in a list. You can modify the list of photos to display by changing the `photos` array in the PHP file.
++ You can modify the structured data in any way you wish, but the project will require the `filepath` and `caption keys` to be used.
 
 ### Load the JSON file
+
++ `index.php` - This is the main file that will be used to display the photos. It will load the JSON file and display the photos in a list. You can modify the list of photos to display by changing the `photos` array in the PHP file.
 
 + Put the following code in your `index.php` file.  This will acccess the JSON file using a relative path and parse the data into an array - to make it readable.
 
@@ -58,9 +58,13 @@ This is a simple project to demonstrate how to create a clickable photo list usi
     ?>
 ```
 
+This defines 2 variables that us access to the file and the means to parse the data into an array, which is a structured data format for the returned data.
+
 ### Display the Photos 
 
 Now, this is the more complicated part. This is the syntax this app uses to parse and display the data in your JSON file.
+
+Look at
 
 ```php
 
@@ -72,6 +76,8 @@ Now, this is the more complicated part. This is the syntax this app uses to pars
     ?>
        
 ```
+
+Look at the filepath and caption keys in the JSON file. In this example we are accessing the first and only the first photo in our last.  (that's what the ` $default_photo = $photos[0];` means in our code - it's called a 0 index based array where 0 is the first item).
 
 Which will leave you with code that looks something like this:
 
@@ -87,6 +93,8 @@ Which will leave you with code that looks something like this:
 
 ### Customise the photo list
 
+Depending on what you json list looks like you can change any of the array keys returned that you wish.
+
 ```php
 
     <?php 
@@ -95,7 +103,7 @@ Which will leave you with code that looks something like this:
     ?>
 ```
 
-Now the caption 
+Now for the the caption.... 
 
 ```php
 
@@ -104,7 +112,9 @@ Now the caption
     </div>
 ```
 
-You can add any number of additional keys and values to each individual photo. You can also add new photos to the list. The project will require the filepath and caption keys to be used.
+## How to Add records
+
+You can add any number of additional keys and values to each individual photo. You can also add new photos to the list. The project will require the `filepath` and `caption` keys to be used.
 
 To generate the list, embed the caption text you'd like to serve as the image title into a list element.
 
@@ -122,7 +132,7 @@ To generate the list, embed the caption text you'd like to serve as the image ti
 
 If you look at `foreach($photos as $photo): ?>` you'll see that the `foreach` loop is iterating the data stored and made readable in $json_data and does this for as many times as there are photos in the JSON file. And we're displaying the data in the same way as before by using a JSON key.  `<?php echo htmlspecialchars($photo['caption']); ?>`.
 
-
+In english, it's the code we need to display more than 1 photo from our list.
 
 ## Requirements
 
