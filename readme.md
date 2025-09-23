@@ -1,6 +1,6 @@
 # Clickable Photo List
 
-`Last Update: 15/09/2025 - 15:41`
+`Last Update: 23/09/2025 - 12:53`
 
 This is a simple project to demonstrate how to create a clickable photo list using PHP and JSON. You can use this repository to create your own photo list.
 
