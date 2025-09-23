@@ -1,12 +1,12 @@
 # Clickable Photo List
 
-`Last Update: 23/09/2025 - 12:53`
+`Last Update: 23/09/2025 - 13:04`
 
 This is a simple project to demonstrate how to create a clickable photo list using PHP and JSON. You can use this repository to create your own photo list.
 
 ## Sections
 
-+ [Instructions](#instructions) | [Requirements](Requirements) | [Authorship](#authorship) | [License](#license)
++ [Instructions](#instructions) | [Requirements](#requirements) | [Authorship](#authorship) | [License](#license)
 
 ## Instructions
 
@@ -39,6 +39,8 @@ This is a simple project to demonstrate how to create a clickable photo list usi
 
 + You can modify the structured data in any way you wish, but the project will require the `filepath` and `caption keys` to be used.
 
+[Back to Top](#clickable-photo-list)
+
 ### Load the JSON file
 
 + `index.php` - This is the main file that will be used to display the photos. It will load the JSON file and display the photos in a list. You can modify the list of photos to display by changing the `photos` array in the PHP file.
@@ -59,6 +61,8 @@ This is a simple project to demonstrate how to create a clickable photo list usi
 ```
 
 This defines 2 variables that us access to the file and the means to parse the data into an array, which is a structured data format for the returned data.
+
+[Back to Top](#clickable-photo-list)
 
 ### Display the Photos 
 
@@ -91,6 +95,8 @@ Which will leave you with code that looks something like this:
 
 ```
 
+[Back to Top](#clickable-photo-list)
+
 ### Customise the photo list
 
 Depending on what you json list looks like you can change any of the array keys returned that you wish.
@@ -112,7 +118,9 @@ Now for the the caption....
     </div>
 ```
 
-## How to Add records
+[Back to Top](#clickable-photo-list)
+
+### How to Add records
 
 You can add any number of additional keys and values to each individual photo. You can also add new photos to the list. The project will require the `filepath` and `caption` keys to be used.
 
@@ -130,9 +138,11 @@ To generate the list, embed the caption text you'd like to serve as the image ti
 
 ```
 
-If you look at `foreach($photos as $photo): ?>` you'll see that the `foreach` loop is iterating the data stored and made readable in $json_data and does this for as many times as there are photos in the JSON file. And we're displaying the data in the same way as before by using a JSON key.  `<?php echo htmlspecialchars($photo['caption']); ?>`.
+If you look at `foreach($photos as $photo): ?>` you'll see that the `foreach` loop is iterating the data stored and made readable in `$json_data` and does this for as many times as there are photos in the JSON file. And we're displaying the data in the same way as before by using a JSON key. `<?php echo htmlspecialchars($photo['caption']); ?>`.
 
 In english, it's the code we need to display more than 1 photo from our list.
+
+[Back to Top](#clickable-photo-list)
 
 ## Requirements
 
@@ -149,7 +159,7 @@ In english, it's the code we need to display more than 1 photo from our list.
 
 ```
 
-[Back to top](#clickable-photo-list)
+[Back to Top](#clickable-photo-list)
 
 ## Authorship
 
@@ -157,4 +167,12 @@ I created this project with the use of AI to provide a differnt way of interacti
 
 Drop me a message on Twitter/X [@jg_digitalMedia](https://twitter.com/jg_digitalMedia) or email me at [mail@jonniegrieve.co.uk](mailto:mail@jonniegrieve.co.uk).
 
-[Back to top](#clickable-photo-list)
+[Back to Top](#clickable-photo-list)
+
+## License
+
+Feel free to clone this project and adapt it for your own needs.
+
+You can clone it directly with `git clone https://github.com/jg-digital-media/clickable_photo_list.git` or download the ZIP file from the GitHub Repository and extract it to a folder on your local server or hard drive.
+
+[Back to Top](#clickable-photo-list)
