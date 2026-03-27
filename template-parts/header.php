@@ -13,8 +13,8 @@
     
     <header>
 
-        <h1>Flower List</h1>
+        <h1>Photo List</h1>
 
-        <h2>Clickable list of flowers with their scientific names where available</h2>
+        <h2>Clickable list of photos that can be adapted to your needs.</h2>
 
     </header>

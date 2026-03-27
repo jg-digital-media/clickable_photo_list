@@ -1,16 +1,16 @@
 [
     {
-        "filename": "IMG_8194.JPG",
-        "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/flowers/IMG_8194.JPG",
-        "caption": "caption",
+        "filename": "IMG_0000.JPG",
+        "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/photos/IMG_0000.JPG",
+        "caption": "caption 1",
         "additional_key_one": "additional_key_value_one",
-        "date": "22-08-2025"
+        "date": "00-00-0000"
     }, {
-        "filename": "IMG_8194.JPG",
-        "filepath": "20250131_202201.jpg",
+        "filename": "IMG_0000.JPG",
+        "filepath": "https://jgdm-projects.s3.eu-west-2.amazonaws.com/clickable_photo_list/photos/IMG_0000.JPG",
         "caption": "caption 2",
         "additional_key_one": "additional_key_value_one",
-        "date": "22-08-2025"
+        "date": "00-00-0000"
     }
 
 ]
